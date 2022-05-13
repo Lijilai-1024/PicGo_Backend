@@ -21,11 +21,11 @@ from rest_framework import routers
 from picgo_backend import settings
 
 router = routers.DefaultRouter()
-router.register(r'upload', views.ImageViewSet)
+router.register(r'api/upload', views.ImageViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/admin/', admin.site.urls),
     path('',include(router.urls)),
-    path('show/',views.ShowImage.as_view()),
-    re_path(r'media/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
+    path('api/show/',views.ShowImage.as_view()),
+    re_path(r'api/media/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
 ]
