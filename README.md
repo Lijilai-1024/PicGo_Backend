@@ -2,11 +2,11 @@
 采用django框架编写的简单后端
 ### 图片上传
 ```
-/upload/
+/api/upload/
 ```
 ### 图片展示
 ```
-/show/
+/api/show/
 ```
 详情可通过drf页面查看
 
